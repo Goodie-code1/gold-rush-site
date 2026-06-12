@@ -40,7 +40,6 @@
 </head>
 <body class="bg-voidBlack text-zinc-200 antialiased selection:bg-cyberPurple selection:text-white overflow-hidden">
 
-    <!-- FRONT PAGE GATEWAY -->
     <div id="portalGateway" class="fixed inset-0 bg-voidBlack z-[100] flex flex-col items-center justify-center transition-all duration-1000 ease-in-out border-b border-cyberPurple/20">
         <canvas id="gatewayCanvas" class="absolute inset-0 w-full h-full opacity-60 pointer-events-none"></canvas>
         
@@ -52,7 +51,6 @@
                 // INITIALIZING SYNDICATE NET //
             </div>
 
-            <!-- CENTRAL CYBERPUNK CAT -->
             <div class="w-48 h-48 sm:w-56 sm:h-56 relative group animate-float-slow my-4">
                 <div class="absolute inset-0 rounded-full border border-dashed border-cyberPurple/40 animate-[spin_40s_linear_infinite]"></div>
                 <div class="absolute inset-4 rounded-full bg-terminalDark border border-cyberPurple/30 overflow-hidden flex items-center justify-center shadow-[0_0_60px_rgba(168,85,247,0.35)]">
@@ -93,24 +91,21 @@
     </div>
 
 
-    <!-- REAL ECOSYSTEM INTERFACE MASTER DASHBOARD -->
     <div id="mainDashboard" class="opacity-0 transition-opacity duration-1000">
         
-        <!-- TOP NAVIGATION BAR WITH EXPLICIT 6 HEADINGS -->
         <nav class="fixed top-0 left-0 w-full z-50 bg-voidBlack/90 backdrop-blur-md border-b border-white/[0.05]">
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <a href="#" class="font-mono-tech text-base font-black tracking-widest text-white uppercase">
                     $NPCAT
                 </a>
                 
-                <!-- ALL 6 SECTIONS FOR DESKTOP SCREEN COHESION -->
                 <div class="hidden lg:flex items-center gap-4 xl:gap-6 font-mono-tech text-[10px] tracking-wider font-bold">
                     <a href="#about" class="text-zinc-400 hover:text-white transition-colors uppercase">// ABOUT</a>
                     <a href="#pillars" class="text-zinc-400 hover:text-cyberPurple transition-colors uppercase">// PILLARS</a>
                     <a href="#tokenomics" class="text-zinc-400 hover:text-neonCyan transition-colors uppercase">// TOKENOMICS</a>
                     <a href="#roadmap" class="text-zinc-400 hover:text-neonGreen transition-colors uppercase">// ROADMAP</a>
                     <a href="#whats-next" class="text-zinc-400 hover:text-white transition-colors uppercase">// NEXT</a>
-                    <a href="#join-community" class="text-zinc-400 hover:text-neonPurpleLink transition-colors uppercase">// JOIN US</a>
+                    <a href="#join-community" class="text-zinc-400 hover:text-neonPurpleLink transition-colors uppercase">// JOIN THE COMMUNITY</a>
                 </div>
 
                 <div class="flex items-center gap-4">
@@ -127,12 +122,11 @@
             </div>
         </nav>
 
-        <!-- ABOUT SECTION / HERO -->
         <section id="about" class="min-h-screen max-w-7xl mx-auto px-6 sm:px-8 pt-32 grid lg:grid-cols-12 gap-12 items-center relative">
             <div class="absolute w-[500px] h-[500px] bg-cyberPurple/5 rounded-full blur-[140px] -z-10 top-1/4 left-1/4"></div>
             
             <div class="lg:col-span-7 space-y-8">
-                <div class="inline-flex items-center gap-3 font-mono-tech text-[10px] text-neonGreen trackingest uppercase border border-neonGreen/20 bg-neonGreen/5 px-3 py-1.5">
+                <div class="inline-flex items-center gap-3 font-mono-tech text-[10px] text-neonGreen tracking-widest uppercase border border-neonGreen/20 bg-neonGreen/5 px-3 py-1.5">
                     <span class="w-1 h-1 bg-neonGreen animate-ping rounded-full"></span>
                     FAIR. SAFE. COMMUNITY OWNED.
                 </div>
@@ -153,7 +147,6 @@
                 </div>
             </div>
 
-            <!-- THE ROCKET BOX STAT FROM IMAGE -->
             <div class="lg:col-span-5 bg-terminalDark border border-neonGreen/30 p-8 font-mono-tech text-center space-y-4 shadow-2xl relative rounded-xl max-w-xs mx-auto lg:w-full">
                 <div class="flex items-center justify-center gap-2 text-neonGreen font-bold text-sm tracking-widest">
                     <span class="w-2 h-2 bg-neonGreen rounded-full animate-pulse"></span>
@@ -171,7 +164,6 @@
             </div>
         </section>
 
-        <!-- CORE PILLARS -->
         <section id="pillars" class="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-t border-white/[0.04]">
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1">
@@ -200,7 +192,6 @@
             </div>
         </section>
 
-        <!-- TOKENOMICS -->
         <section id="tokenomics" class="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-t border-white/[0.04]">
             <div class="mb-12">
                 <span class="font-mono-tech text-[10px] text-neonCyan tracking-widest block uppercase">// MATRIX MATH</span>
@@ -230,11 +221,10 @@
             </div>
         </section>
 
-        <!-- ROADMAP SECTION -->
         <section id="roadmap" class="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-t border-white/[0.04]">
             <div class="mb-12">
                 <span class="font-mono-tech text-[10px] text-neonGreen tracking-widest block uppercase">// THE TIMELINE</span>
-                <h2 class="text-3xl font-black text-white uppercase tracking-tight mt-1">Roadmap Protocols</h2>
+                <h2 class="text-3xl font-black text-white uppercase tracking-tight mt-1">Roadmap</h2>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -264,7 +254,6 @@
             </div>
         </section>
 
-        <!-- WHAT'S NEXT -->
         <section id="whats-next" class="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-t border-white/[0.04]">
             <div class="bg-gradient-to-r from-terminalDark via-zinc-950 to-terminalDark border border-cyberPurple/30 p-8 sm:p-10 rounded-xl max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8 shadow-[0_0_50px_rgba(168,85,247,0.05)]">
                 <div class="space-y-4 max-w-xl text-left">
@@ -287,7 +276,6 @@
             </div>
         </section>
 
-        <!-- VERIFIED CONTRACT CONTAINER -->
         <section id="contract" class="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-t border-white/[0.04]">
             <div class="bg-terminalDark border border-white/[0.05] p-6 sm:p-8 max-w-3xl mx-auto text-center space-y-6">
                 <div class="space-y-1">
@@ -303,18 +291,16 @@
             </div>
         </section>
 
-        <!-- COMMUNITY JOIN HEADER SECTION -->
         <section id="join-community" class="max-w-7xl mx-auto px-6 sm:px-8 pt-32 border-t border-white/[0.04]">
             <div class="text-center max-w-2xl mx-auto space-y-3">
                 <span class="font-mono-tech text-[10px] text-cyberPurple tracking-[0.25em] block uppercase">// SYNDICATE HUB //</span>
-                <h2 class="text-4xl font-black text-white uppercase tracking-tight">Join The Community</h2>
+                <h2 class="text-4xl font-black text-white uppercase tracking-tight">Join The $NPCAT Community</h2>
                 <p class="text-xs sm:text-sm text-zinc-400 max-w-md mx-auto leading-relaxed">
                     Follow us, engage with us, meme with us, and help shape the future of $NPCAT. Together, we can turn a meme into a legacy.
                 </p>
             </div>
         </section>
 
-        <!-- FOOTER / LINKS -->
         <footer class="max-w-7xl mx-auto px-6 sm:px-8 pb-24 pt-12 text-center space-y-8">
             <div class="flex flex-row justify-center items-center gap-4 text-xs font-mono-tech">
                 <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="px-4 sm:px-6 py-3 border border-zinc-800 text-zinc-300 hover:border-neonCyan hover:text-white transition-colors font-bold text-xs">𝕏 (TWITTER)</a>
@@ -331,7 +317,6 @@
         </footer>
     </div>
 
-    <!-- CODE TRIGGERS -->
     <script>
         function executeCopy() {
             const hash = document.getElementById('caHash').innerText;
