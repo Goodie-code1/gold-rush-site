@@ -36,8 +36,9 @@
             <a href="#" class="font-mono-tech text-xs font-bold tracking-[0.4em] text-white uppercase">
                 //NPCAT.<span class="text-cyberPurple">SYS</span>
             </a>
-            <div class="flex items-center gap-6">
-                <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="text-xs font-bold text-zinc-300 hover:text-white transition-colors">𝕏</a>
+            <div class="flex items-center gap-8">
+                <!-- Made the X significantly larger and bolder -->
+                <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="text-lg font-black text-white hover:text-cyberPurple transition-colors leading-none">𝕏</a>
                 <a href="https://t.me/NPCATt0ken" target="_blank" class="text-xs font-bold text-zinc-300 hover:text-white transition-colors">TELEGRAM</a>
                 <a href="#contract" class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-white font-mono-tech text-[10px] font-bold tracking-widest uppercase hover:border-cyberPurple transition-all">
                     VIEW_CONTRACT
@@ -73,13 +74,16 @@
             </div>
         </div>
 
-        <!-- Right Column: Live Data Feed Stream -->
-        <div class="lg:col-span-5 hidden lg:block bg-terminalDark border border-white/[0.05] p-6 font-mono-tech text-[11px] leading-relaxed space-y-4 shadow-2xl relative">
-            <div class="flex items-center justify-between border-b border-white/[0.05] pb-3 text-zinc-400">
+        <!-- Right Column: Live Data Feed Stream + Moving Matrix Canvas Overlay -->
+        <div class="lg:col-span-5 hidden lg:block bg-terminalDark border border-white/[0.05] p-6 font-mono-tech text-[11px] leading-relaxed space-y-4 shadow-2xl relative overflow-hidden h-[320px]">
+            <!-- Live Canvas Matrix Rain Effect Background -->
+            <canvas id="matrixCanvas" class="absolute inset-0 w-full h-full opacity-[0.15] pointer-events-none"></canvas>
+            
+            <div class="relative z-10 flex items-center justify-between border-b border-white/[0.05] pb-3 text-zinc-400 bg-terminalDark/80 backdrop-blur-sm">
                 <span>TOKEN_LOG_STREAM</span>
                 <span class="text-neonGreen">● ONLINE</span>
             </div>
-            <div class="space-y-2 text-zinc-200">
+            <div class="relative z-10 space-y-2 text-zinc-200 bg-terminalDark/60 backdrop-blur-xs p-2 rounded">
                 <p class="text-zinc-500">&gt; Loading Token Parameters...</p>
                 <p class="text-zinc-300">&gt; Liquidity Status: <span class="text-neonGreen font-bold">Permanently Locked</span></p>
                 <p class="text-zinc-300">&gt; Contract State: <span class="text-neonCyan font-bold">100% Renounced</span></p>
@@ -87,7 +91,7 @@
                 <p class="text-zinc-300">&gt; Launch Strategy: <span class="text-white font-bold">100% Fair Launch</span></p>
                 <p class="text-zinc-500">&gt; Connection secure. Welcome to the community.</p>
             </div>
-            <div class="bg-voidBlack p-3 border border-white/[0.03] text-zinc-400 text-[10px]">
+            <div class="absolute bottom-6 left-6 right-6 z-10 bg-voidBlack/90 p-3 border border-white/[0.03] text-zinc-400 text-[10px]">
                 NOTICE: This project operates purely through decentralized community ownership.
             </div>
         </div>
@@ -183,18 +187,27 @@
         </div>
     </section>
 
-    <!-- SECURITY ROUTING ACCESS -->
+    <!-- SECURITY ROUTING ACCESS WITH TWITTER PLATFORM GRAPHIC -->
     <section id="contract" class="max-w-7xl mx-auto px-8 py-24 border-t border-white/[0.04]">
-        <div class="bg-terminalDark border border-white/[0.05] p-8 max-w-3xl mx-auto text-center space-y-6">
-            <div class="space-y-1">
+        <div class="bg-terminalDark border border-white/[0.05] p-8 max-w-3xl mx-auto text-center space-y-8 relative overflow-hidden">
+            
+            <div class="space-y-1 relative z-10">
                 <h3 class="text-lg font-bold text-white uppercase tracking-tight">Verified Contract Address</h3>
                 <p class="text-xs text-zinc-400 font-mono-tech">Copy the official address to track or purchase $NPCAT securely.</p>
             </div>
-            <div class="flex flex-col sm:flex-row items-center justify-between bg-voidBlack border border-white/[0.05] p-3 font-mono-tech text-xs">
+            
+            <div class="flex flex-col sm:flex-row items-center justify-between bg-voidBlack border border-white/[0.05] p-3 font-mono-tech text-xs relative z-10">
                 <span id="caHash" class="text-neonCyan truncate tracking-wider font-bold mb-3 sm:mb-0 px-2 text-sm">BmQEXGDJNGEK78P3wVeoHNoJo6eUzC8o7bvBcx8wpump</span>
                 <button onclick="executeCopy()" id="copyTerminalBtn" class="w-full sm:w-auto bg-cyberPurple text-white font-bold px-6 py-2.5 uppercase text-[10px] tracking-widest hover:bg-white hover:text-black transition-all">
                     COPY_ADDRESS
                 </button>
+            </div>
+
+            <!-- Custom 𝕏 Platform Graphic Accent Below Content -->
+            <div class="pt-4 flex justify-center items-center opacity-20 hover:opacity-40 transition-opacity duration-500">
+                <div class="w-12 h-12 border border-white/30 flex items-center justify-center rounded-lg bg-voidBlack">
+                    <span class="text-2xl font-black text-white leading-none select-none">𝕏</span>
+                </div>
             </div>
         </div>
     </section>
@@ -206,8 +219,8 @@
             <p class="text-xs text-zinc-400 max-w-md mx-auto leading-relaxed">Follow us, engage with us, meme with us, and help shape the future of $NPCAT. Together, we can turn a meme into a legacy.</p>
         </div>
         <div class="flex justify-center items-center gap-4 text-xs font-mono-tech">
-            <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="px-6 py-3 border border-zinc-800 text-zinc-300 hover:border-neonCyan hover:text-white transition-colors">𝕏 (TWITTER)</a>
-            <a href="https://t.me/NPCATt0ken" target="_blank" class="px-6 py-3 border border-zinc-800 text-zinc-300 hover:border-cyberPurple hover:text-white transition-colors">TELEGRAM</a>
+            <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="px-6 py-3 border border-zinc-800 text-zinc-300 hover:border-neonCyan hover:text-white transition-colors font-bold text-sm">𝕏 (TWITTER)</a>
+            <a href="https://t.me/NPCATt0ken" target="_blank" class="px-6 py-3 border border-zinc-800 text-zinc-300 hover:border-cyberPurple hover:text-white transition-colors font-bold">TELEGRAM</a>
         </div>
         <div class="text-[9px] text-zinc-600 font-mono-tech tracking-widest uppercase">
             &copy; 2026 NPCAT // ALL RIGHTS RESERVED // COMMUNITY OWNED PROTOCOL.
@@ -229,6 +242,48 @@
                 btn.style.backgroundColor = '#a855f7';
             }, 2000);
         }
+
+        // --- Custom Matrix Digital Rain Background Logic ---
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.offsetWidth;
+            canvas.height = canvas.parentElement.offsetHeight;
+        }
+        resizeCanvas();
+
+        const katakana = '01';
+        const alphabet = katakana.split('');
+
+        const fontSize = 12;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(9, 7, 15, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#a855f7'; // Cyber Purple Matrix Stream Tint
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet[Math.floor(Math.random() * alphabet.length)];
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 30);
+        window.addEventListener('resize', resizeCanvas);
     </script>
 </body>
 </html>
