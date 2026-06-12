@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Rush Cartel | $RUSH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vaultDark: '#070708',      // Rich obsidian black
+                        vaultCard: '#0f0f12',      // Sleek inner container black
+                        goldGlow: '#e6b940',       // Main radiant gold
+                        goldDark: '#94711c',       // Muted brass/gold for borders
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Premium Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-vaultDark text-gray-400 antialiased selection:bg-goldGlow selection:text-black">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-vaultDark/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-lg font-extrabold tracking-widest text-white uppercase">
+                $RUSH <span class="text-goldGlow">CARTEL</span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-xs font-semibold tracking-widest text-gray-400">
+                <a href="#manifesto" class="hover:text-goldGlow transition-colors uppercase">The Manifesto</a>
+                <a href="#blueprint" class="hover:text-goldGlow transition-colors uppercase">The Blueprint</a>
+                <a href="#allocation" class="hover:text-goldGlow transition-colors uppercase">Allocation</a>
+                <a href="#vault" class="hover:text-goldGlow transition-colors uppercase">The Vault</a>
+            </div>
+            <a href="https://x.com" target="_blank" class="px-5 py-2 bg-gradient-to-r from-goldDark to-goldGlow text-black text-xs font-extrabold uppercase tracking-widest rounded-sm hover:brightness-110 transition-all duration-300 shadow-[0_4px_20px_rgba(230,185,64,0.15)]">
+                Enter Command
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center pt-24 px-6 relative">
+        <!-- Golden ambient lighting behind content -->
+        <div class="absolute w-[600px] h-[400px] bg-goldGlow/5 rounded-full blur-[150px] -z-10 top-1/4"></div>
+        
+        <span class="text-xs font-bold tracking-[0.3em] text-goldGlow uppercase mb-4 bg-goldGlow/10 px-4 py-1.5 rounded-full border border-goldGlow/20">
+            The Standard has Changed
+        </span>
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-white max-w-4xl leading-none uppercase mb-6">
+            We Aren't Chasing Dust. We Want The <span class="text-transparent bg-clip-text bg-gradient-to-r from-goldGlow via-amber-200 to-goldDark drop-shadow-sm">Entire Vault.</span>
+        </h1>
+        <p class="max-w-xl text-gray-400 text-sm sm:text-base md:text-lg mb-10 font-normal leading-relaxed">
+            The streets are tired of temporary trends. The Gold Rush Cartel is a hyper-coordinated syndicate of raiders reshaping dominance on the Solana network.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#vault" class="px-8 py-4 bg-white text-black font-extrabold uppercase tracking-wider text-xs rounded-sm hover:bg-goldGlow transition-colors duration-300 text-center">
+                Secure Allocation
+            </a>
+            <a href="#manifesto" class="px-8 py-4 border border-white/10 text-white font-extrabold uppercase tracking-wider text-xs rounded-sm hover:border-goldGlow/50 hover:bg-goldGlow/5 transition-all duration-300 text-center">
+                Our Manifesto
+            </a>
+        </div>
+    </section>
+
+    <!-- MANIFESTO SECTION (Completely fresh layout) -->
+    <section id="manifesto" class="max-w-6xl mx-auto py-32 px-6 border-t border-white/5">
+        <div class="grid lg:grid-cols-3 gap-12 items-start">
+            <div class="lg:sticky lg:top-32">
+                <span class="text-xs font-bold text-goldGlow tracking-widest uppercase block mb-2">// CORE IDEAL</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white uppercase tracking-tight">The <span class="text-goldGlow">Manifesto</span></h2>
+                <p class="text-gray-500 mt-4 text-sm leading-relaxed">
+                    While others rely on empty hype, we execute structured timeline campaigns. No false roadmaps—just absolute community momentum.
+                </p>
+            </div>
+            <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+                <div class="p-8 bg-vaultCard border border-white/5 rounded-sm">
+                    <div class="w-8 h-8 rounded-full bg-goldGlow/10 border border-goldGlow/20 flex items-center justify-center text-goldGlow text-xs font-bold mb-6">01</div>
+                    <h3 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Pure Meritocracy</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">We don't bow to heavy venture capitalists or insider manipulation. The allocation belongs entirely to the raiders who build the foundations.</p>
+                </div>
+                <div class="p-8 bg-vaultCard border border-white/5 rounded-sm">
+                    <div class="w-8 h-8 rounded-full bg-goldGlow/10 border border-goldGlow/20 flex items-center justify-center text-goldGlow text-xs font-bold mb-6">02</div>
+                    <h3 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Strategic Warfare</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">Our community functions as an algorithm-shattering squad. We raid, we create high-tier media, and we establish cultural dominance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLUEPRINT / ROADMAP SECTION -->
+    <section id="blueprint" class="bg-vaultCard/50 py-32 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold text-goldGlow tracking-widest uppercase">// OPERATION PHASES</span>
+                <h2 class="text-3xl font-extrabold text-white uppercase mt-2">The Strategic <span class="text-goldGlow">Blueprint</span></h2>
+            </div>
+            <div class="space-y-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-vaultDark border border-white/5 rounded-sm hover:border-goldGlow/20 transition-all duration-300">
+                    <div class="mb-4 md:mb-0">
+                        <span class="text-xs font-mono text-goldGlow block mb-1">PHASE I</span>
+                        <h4 class="text-base font-bold text-white uppercase tracking-wide">Syndicate Mobilization</h4>
+                    </div>
+                    <p class="text-xs text-gray-400 max-w-md md:text-right">Activation of the central Telegram hub, launching organic X operations, and initial deployment of targeted content assets.</p>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-vaultDark border border-white/5 rounded-sm hover:border-goldGlow/20 transition-all duration-300">
+                    <div class="mb-4 md:mb-0">
+                        <span class="text-xs font-mono text-goldGlow block mb-1">PHASE II</span>
+                        <h4 class="text-base font-bold text-white uppercase tracking-wide">Liquidity Ignition</h4>
+                    </div>
+                    <p class="text-xs text-gray-400 max-w-md md:text-right">The official token smart contract goes live on Solana DEXs. 100% pool combustion to guarantee permanent security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALLOCATION / TOKENOMICS -->
+    <section id="allocation" class="max-w-5xl mx-auto py-32 px-6 border-t border-white/5">
+        <div class="text-center mb-16">
+            <span class="text-xs font-bold text-goldGlow tracking-widest uppercase">// TRANSPARENT METRICS</span>
+            <h2 class="text-3xl font-extrabold text-white uppercase mt-2">Token <span class="text-goldGlow">Allocation</span></h2>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-8">
+            <div class="p-8 border border-white/5 bg-vaultCard rounded-sm text-center">
+                <p class="text-xs uppercase font-mono tracking-wider text-gray-500 mb-2">Total Supply</p>
+                <p class="text-2xl font-extrabold text-white tracking-tight">1,000,000,000</p>
+                <p class="text-[10px] text-goldGlow uppercase tracking-widest mt-2">Fixed Mint ($RUSH)</p>
+            </div>
+            <div class="p-8 border border-white/5 bg-vaultCard rounded-sm text-center">
+                <p class="text-xs uppercase font-mono tracking-wider text-gray-500 mb-2">Syndicate Fees</p>
+                <p class="text-2xl font-extrabold text-goldGlow tracking-tight">0% Buy / 0% Sell</p>
+                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Zero Slippage Friction</p>
+            </div>
+            <div class="p-8 border border-white/5 bg-vaultCard rounded-sm text-center">
+                <p class="text-xs uppercase font-mono tracking-wider text-gray-500 mb-2">Liquidity Status</p>
+                <p class="text-2xl font-extrabold text-amber-500 tracking-tight">100% Burned</p>
+                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">LP Keys Permanently Destroyed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE VAULT / CONTRACT ADDRESS -->
+    <section id="vault" class="max-w-3xl mx-auto py-32 px-6 text-center border-t border-white/5">
+        <h2 class="text-3xl font-extrabold text-white uppercase tracking-tight mb-4">
+            Access The <span class="text-transparent bg-clip-text bg-gradient-to-r from-goldGlow to-amber-200">Secure Vault</span>
+        </h2>
+        <p class="text-xs text-gray-400 mb-8 max-w-md mx-auto leading-relaxed">
+            Verify the unique token identity before trading on Raydium or Jupiter routers. Avoid imitation pools.
+        </p>
+        
+        <div class="flex items-center justify-between bg-vaultCard border border-goldDark/30 rounded-sm p-4 max-w-xl mx-auto font-mono text-xs sm:text-sm shadow-[0_10px_30px_rgba(230,185,64,0.03)]">
+            <span id="caText" class="text-goldGlow truncate mr-4 tracking-wider">AuRUSH1111111111111111111111111111111111112</span>
+            <button onclick="copyCA()" id="copyBtn" class="bg-goldGlow text-black border border-goldGlow px-4 py-2 font-extrabold uppercase text-[10px] tracking-widest rounded-sm hover:bg-transparent hover:text-goldGlow transition-all duration-300">
+                Copy
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/5 py-12 text-center text-[10px] text-gray-600 font-mono tracking-[0.2em]">
+        &copy; 2026 GOLD RUSH CARTEL. POWERED BY TRUE RAIDERS. NON-FINANCIAL ASSET.
+    </footer>
+
+    <script>
+        function copyCA() {
+            const caText = document.getElementById('caText').innerText;
+            const btn = document.getElementById('copyBtn');
+            navigator.clipboard.writeText(caText);
+            
+            btn.innerText = 'Copied';
+            btn.style.borderColor = '#ffffff';
+            btn.style.backgroundColor = 'transparent';
+            btn.style.color = '#ffffff';
+            
+            setTimeout(() => {
+                btn.innerText = 'Copy';
+                btn.style.borderColor = '#e6b940';
+                btn.style.backgroundColor = '#e6b940';
+                btn.style.color = '#000000';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
