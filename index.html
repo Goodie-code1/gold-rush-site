@@ -40,12 +40,10 @@
 </head>
 <body class="bg-voidBlack text-zinc-200 antialiased selection:bg-cyberPurple selection:text-white overflow-hidden">
 
-    <!-- FRONT PAGE GATEWAY (STRUCTURE INSPIRED BY image_6a825b.jpg - MAINTAINING BRAND PURPLE) -->
+    <!-- FRONT PAGE GATEWAY -->
     <div id="portalGateway" class="fixed inset-0 bg-voidBlack z-[100] flex flex-col items-center justify-center transition-all duration-1000 ease-in-out border-b border-cyberPurple/20">
-        <!-- Interactive canvas handling the premium city skyline and floating neon code dust -->
         <canvas id="gatewayCanvas" class="absolute inset-0 w-full h-full opacity-60 pointer-events-none"></canvas>
         
-        <!-- Deep Ambient Purple Glows matching the reference image styling -->
         <div class="absolute w-[600px] h-[600px] bg-cyberPurple/10 rounded-full blur-[160px] pointer-events-none top-1/4 left-1/4"></div>
         <div class="absolute w-[400px] h-[400px] bg-neonPurpleLink/5 rounded-full blur-[130px] pointer-events-none bottom-1/3 right-1/4"></div>
 
@@ -54,7 +52,7 @@
                 // INITIALIZING SYNDICATE NET //
             </div>
 
-            <!-- CENTRAL CYBERPUNK CAT WITH SIGNATURE PURPLE GLOW -->
+            <!-- CENTRAL CYBERPUNK CAT -->
             <div class="w-48 h-48 sm:w-56 sm:h-56 relative group animate-float-slow my-4">
                 <div class="absolute inset-0 rounded-full border border-dashed border-cyberPurple/40 animate-[spin_40s_linear_infinite]"></div>
                 <div class="absolute inset-4 rounded-full bg-terminalDark border border-cyberPurple/30 overflow-hidden flex items-center justify-center shadow-[0_0_60px_rgba(168,85,247,0.35)]">
@@ -98,17 +96,22 @@
     <!-- REAL ECOSYSTEM INTERFACE MASTER DASHBOARD -->
     <div id="mainDashboard" class="opacity-0 transition-opacity duration-1000">
         
-        <!-- HEADER -->
+        <!-- UPDATED NAVIGATION HEADER: EXPANDED FOR WEB3 STYLING -->
         <nav class="fixed top-0 left-0 w-full z-50 bg-voidBlack/90 backdrop-blur-md border-b border-white/[0.05]">
             <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 <a href="#" class="font-mono-tech text-base font-black tracking-widest text-white uppercase">
                     $NPCAT
                 </a>
-                <div class="hidden md:flex items-center gap-8 font-mono-tech text-[11px] tracking-wider font-bold">
+                
+                <!-- FULLY EXPANDED MENU LINKS -->
+                <div class="hidden lg:flex items-center gap-6 xl:gap-8 font-mono-tech text-[11px] tracking-wider font-bold">
                     <a href="#ecosystem" class="text-zinc-400 hover:text-white transition-colors uppercase">// ECOSYSTEM</a>
                     <a href="#tokenomics" class="text-zinc-400 hover:text-neonCyan transition-colors uppercase">// TOKENOMICS</a>
                     <a href="#whats-next" class="text-zinc-400 hover:text-neonGreen transition-colors uppercase">// WHAT'S NEXT?</a>
+                    <a href="#contract" class="text-zinc-400 hover:text-cyberPurple transition-colors uppercase">// CONTRACT</a>
+                    <a href="#join-community" class="text-zinc-400 hover:text-neonPurpleLink transition-colors uppercase">// JOIN THE HUB</a>
                 </div>
+
                 <div class="flex items-center gap-5">
                     <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="text-lg font-black text-white hover:text-cyberPurple transition-colors px-1" title="Twitter / X">
                         𝕏
@@ -117,7 +120,7 @@
                         TG
                     </a>
                     <a href="#contract" class="px-3 py-2 bg-zinc-900 border border-zinc-800 text-white font-mono-tech text-[10px] font-bold tracking-widest uppercase hover:border-cyberPurple transition-all">
-                        CONTRACT
+                        CONTRACT_DATA
                     </a>
                 </div>
             </div>
@@ -350,7 +353,7 @@
             }, 1500);
         }
 
-        // --- CYBER PURPLE LANDSCAPE ENGINE (Layout Inspired by image_6a825b.jpg) ---
+        // --- CYBER PURPLE LANDSCAPE ENGINE ---
         const canvas = document.getElementById('gatewayCanvas');
         const ctx = canvas.getContext('2d');
 
@@ -363,7 +366,6 @@
             generateSkyline();
         }
 
-        // Generate static silhouette building structures at the bottom matching the layout of image_6a825b.jpg
         function generateSkyline() {
             buildings = [];
             const buildingCount = Math.ceil(canvas.width / 60);
@@ -382,7 +384,6 @@
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        // Create glowing cyberpunk purple nodes drifting upwards
         function createParticle() {
             if (particles.length < 60) {
                 particles.push({
@@ -397,21 +398,17 @@
         }
 
         function drawPurpleGateway() {
-            // Base void background
             ctx.fillStyle = '#030206';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Draw the city skyline silhouettes at the bottom in deep purple alpha
             for (let b of buildings) {
                 ctx.fillStyle = `rgba(168, 85, 247, ${b.alpha})`;
                 ctx.fillRect(b.x, canvas.height - b.h, b.w, b.h);
-                // Highlight edges slightly for that premium grid feel
                 ctx.strokeStyle = `rgba(192, 132, 252, ${b.alpha * 0.5})`;
                 ctx.lineWidth = 1;
                 ctx.strokeRect(b.x, canvas.height - b.h, b.w, b.h);
             }
 
-            // Draw and animate the neon purple float grid sparks
             createParticle();
             for (let i = particles.length - 1; i >= 0; i--) {
                 let p = particles[i];
@@ -424,10 +421,9 @@
                 ctx.shadowBlur = 8;
                 ctx.globalAlpha = p.alpha;
                 ctx.fill();
-                ctx.shadowBlur = 0; // reset
-                ctx.globalAlpha = 1.0; // reset
+                ctx.shadowBlur = 0;
+                ctx.globalAlpha = 1.0;
 
-                // Remove out-of-bounds nodes safely
                 if (p.y < -10) {
                     particles.splice(i, 1);
                 }
@@ -436,7 +432,6 @@
             requestAnimationFrame(drawPurpleGateway);
         }
 
-        // Fire up the high-tech loop
         drawPurpleGateway();
     </script>
 </body>
