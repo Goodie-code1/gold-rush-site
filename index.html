@@ -3,189 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Rush Cartel | $RUSH</title>
+    <title>$NPCAT Syndicate | More Than A Meme</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        vaultDark: '#070708',      // Rich obsidian black
-                        vaultCard: '#0f0f12',      // Sleek inner container black
-                        goldGlow: '#e6b940',       // Main radiant gold
-                        goldDark: '#94711c',       // Muted brass/gold for borders
+                        voidBlack: '#050308',
+                        panelDark: '#0b0813',
+                        neonPurple: '#9333ea',
+                        electricCyan: '#06b6d4',
+                        matrixGreen: '#10b981',
+                    },
+                    letterSpacing: {
+                        superWide: '0.3em',
                     }
                 }
             }
         }
     </script>
-    <!-- Premium Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-image: radial-gradient(rgba(147, 51, 234, 0.03) 1px, transparent 0); background-size: 24px 24px; }
+        .glow-hover:hover { box-shadow: 0 0 30px rgba(147, 51, 234, 0.15); border-color: rgba(6, 182, 212, 0.3); }
     </style>
 </head>
-<body class="bg-vaultDark text-gray-400 antialiased selection:bg-goldGlow selection:text-black">
+<body class="bg-voidBlack text-zinc-400 antialiased selection:bg-neonPurple selection:text-white">
 
-    <!-- NAVIGATION -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-vaultDark/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-lg font-extrabold tracking-widest text-white uppercase">
-                $RUSH <span class="text-goldGlow">CARTEL</span>
+    <!-- GLOBAL HUD NAVIGATION -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-voidBlack/70 backdrop-blur-xl border-b border-white/[0.04]">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="text-sm font-black tracking-superWide text-white uppercase">
+                $NPCAT<span class="text-electricCyan">_SYNDICATE</span>
             </a>
-            <div class="hidden md:flex space-x-10 text-xs font-semibold tracking-widest text-gray-400">
-                <a href="#manifesto" class="hover:text-goldGlow transition-colors uppercase">The Manifesto</a>
-                <a href="#blueprint" class="hover:text-goldGlow transition-colors uppercase">The Blueprint</a>
-                <a href="#allocation" class="hover:text-goldGlow transition-colors uppercase">Allocation</a>
-                <a href="#vault" class="hover:text-goldGlow transition-colors uppercase">The Vault</a>
+            <div class="hidden lg:flex items-center space-x-12 text-[11px] font-bold tracking-superWide text-zinc-500 uppercase">
+                <a href="#pillars" class="hover:text-white transition-colors">.pillars</a>
+                <a href="#tokenomics" class="hover:text-white transition-colors">.allocation</a>
+                <a href="#roadmap" class="hover:text-white transition-colors">.timeline</a>
+                <a href="#join" class="hover:text-white transition-colors">.terminal</a>
             </div>
-            <a href="https://x.com" target="_blank" class="px-5 py-2 bg-gradient-to-r from-goldDark to-goldGlow text-black text-xs font-extrabold uppercase tracking-widest rounded-sm hover:brightness-110 transition-all duration-300 shadow-[0_4px_20px_rgba(230,185,64,0.15)]">
-                Enter Command
+            <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="px-5 py-2.5 bg-transparent border border-neonPurple text-white text-[10px] font-bold uppercase tracking-widest rounded-none hover:bg-neonPurple transition-all duration-300 shadow-[0_0_15px_rgba(147,51,234,0.1)]">
+                Launch Raid
             </a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center pt-24 px-6 relative">
-        <!-- Golden ambient lighting behind content -->
-        <div class="absolute w-[600px] h-[400px] bg-goldGlow/5 rounded-full blur-[150px] -z-10 top-1/4"></div>
+    <!-- CORE HERO VIEWPORT -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center pt-32 px-6 relative overflow-hidden">
+        <div class="absolute w-[700px] h-[500px] bg-neonPurple/5 rounded-full blur-[160px] -z-10 top-1/4 -left-10"></div>
+        <div class="absolute w-[500px] h-[500px] bg-electricCyan/5 rounded-full blur-[140px] -z-10 bottom-20 right-0"></div>
         
-        <span class="text-xs font-bold tracking-[0.3em] text-goldGlow uppercase mb-4 bg-goldGlow/10 px-4 py-1.5 rounded-full border border-goldGlow/20">
-            The Standard has Changed
-        </span>
-        <h1 class="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-white max-w-4xl leading-none uppercase mb-6">
-            We Aren't Chasing Dust. We Want The <span class="text-transparent bg-clip-text bg-gradient-to-r from-goldGlow via-amber-200 to-goldDark drop-shadow-sm">Entire Vault.</span>
+        <div class="inline-flex items-center gap-2 border border-white/[0.06] bg-white/[0.02] px-4 py-2 mb-8 rounded-none">
+            <span class="w-1.5 h-1.5 rounded-full bg-matrixGreen animate-pulse"></span>
+            <span class="text-[10px] font-bold tracking-superWide text-zinc-400 uppercase">SOLANA PROTOCOL ACTIVE</span>
+        </div>
+        
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter text-white max-w-5xl leading-[0.95] uppercase mb-8">
+            MORE THAN A MEME.<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-400 to-neonPurple">WE'RE BUILDING A NARRATIVE.</span>
         </h1>
-        <p class="max-w-xl text-gray-400 text-sm sm:text-base md:text-lg mb-10 font-normal leading-relaxed">
-            The streets are tired of temporary trends. The Gold Rush Cartel is a hyper-coordinated syndicate of raiders reshaping dominance on the Solana network.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-            <a href="#vault" class="px-8 py-4 bg-white text-black font-extrabold uppercase tracking-wider text-xs rounded-sm hover:bg-goldGlow transition-colors duration-300 text-center">
-                Secure Allocation
-            </a>
-            <a href="#manifesto" class="px-8 py-4 border border-white/10 text-white font-extrabold uppercase tracking-wider text-xs rounded-sm hover:border-goldGlow/50 hover:bg-goldGlow/5 transition-all duration-300 text-center">
-                Our Manifesto
-            </a>
-        </div>
-    </section>
-
-    <!-- MANIFESTO SECTION (Completely fresh layout) -->
-    <section id="manifesto" class="max-w-6xl mx-auto py-32 px-6 border-t border-white/5">
-        <div class="grid lg:grid-cols-3 gap-12 items-start">
-            <div class="lg:sticky lg:top-32">
-                <span class="text-xs font-bold text-goldGlow tracking-widest uppercase block mb-2">// CORE IDEAL</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white uppercase tracking-tight">The <span class="text-goldGlow">Manifesto</span></h2>
-                <p class="text-gray-500 mt-4 text-sm leading-relaxed">
-                    While others rely on empty hype, we execute structured timeline campaigns. No false roadmaps—just absolute community momentum.
-                </p>
-            </div>
-            <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
-                <div class="p-8 bg-vaultCard border border-white/5 rounded-sm">
-                    <div class="w-8 h-8 rounded-full bg-goldGlow/10 border border-goldGlow/20 flex items-center justify-center text-goldGlow text-xs font-bold mb-6">01</div>
-                    <h3 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Pure Meritocracy</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">We don't bow to heavy venture capitalists or insider manipulation. The allocation belongs entirely to the raiders who build the foundations.</p>
-                </div>
-                <div class="p-8 bg-vaultCard border border-white/5 rounded-sm">
-                    <div class="w-8 h-8 rounded-full bg-goldGlow/10 border border-goldGlow/20 flex items-center justify-center text-goldGlow text-xs font-bold mb-6">02</div>
-                    <h3 class="text-lg font-bold text-white mb-3 uppercase tracking-wide">Strategic Warfare</h3>
-                    <p class="text-xs text-gray-400 leading-relaxed">Our community functions as an algorithm-shattering squad. We raid, we create high-tier media, and we establish cultural dominance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BLUEPRINT / ROADMAP SECTION -->
-    <section id="blueprint" class="bg-vaultCard/50 py-32 border-t border-white/5">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-xs font-bold text-goldGlow tracking-widest uppercase">// OPERATION PHASES</span>
-                <h2 class="text-3xl font-extrabold text-white uppercase mt-2">The Strategic <span class="text-goldGlow">Blueprint</span></h2>
-            </div>
-            <div class="space-y-6">
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-vaultDark border border-white/5 rounded-sm hover:border-goldGlow/20 transition-all duration-300">
-                    <div class="mb-4 md:mb-0">
-                        <span class="text-xs font-mono text-goldGlow block mb-1">PHASE I</span>
-                        <h4 class="text-base font-bold text-white uppercase tracking-wide">Syndicate Mobilization</h4>
-                    </div>
-                    <p class="text-xs text-gray-400 max-w-md md:text-right">Activation of the central Telegram hub, launching organic X operations, and initial deployment of targeted content assets.</p>
-                </div>
-                <div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-vaultDark border border-white/5 rounded-sm hover:border-goldGlow/20 transition-all duration-300">
-                    <div class="mb-4 md:mb-0">
-                        <span class="text-xs font-mono text-goldGlow block mb-1">PHASE II</span>
-                        <h4 class="text-base font-bold text-white uppercase tracking-wide">Liquidity Ignition</h4>
-                    </div>
-                    <p class="text-xs text-gray-400 max-w-md md:text-right">The official token smart contract goes live on Solana DEXs. 100% pool combustion to guarantee permanent security.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ALLOCATION / TOKENOMICS -->
-    <section id="allocation" class="max-w-5xl mx-auto py-32 px-6 border-t border-white/5">
-        <div class="text-center mb-16">
-            <span class="text-xs font-bold text-goldGlow tracking-widest uppercase">// TRANSPARENT METRICS</span>
-            <h2 class="text-3xl font-extrabold text-white uppercase mt-2">Token <span class="text-goldGlow">Allocation</span></h2>
-        </div>
-        <div class="grid sm:grid-cols-3 gap-8">
-            <div class="p-8 border border-white/5 bg-vaultCard rounded-sm text-center">
-                <p class="text-xs uppercase font-mono tracking-wider text-gray-500 mb-2">Total Supply</p>
-                <p class="text-2xl font-extrabold text-white tracking-tight">1,000,000,000</p>
-                <p class="text-[10px] text-goldGlow uppercase tracking-widest mt-2">Fixed Mint ($RUSH)</p>
-            </div>
-            <div class="p-8 border border-white/5 bg-vaultCard rounded-sm text-center">
-                <p class="text-xs uppercase font-mono tracking-wider text-gray-500 mb-2">Syndicate Fees</p>
-                <p class="text-2xl font-extrabold text-goldGlow tracking-tight">0% Buy / 0% Sell</p>
-                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">Zero Slippage Friction</p>
-            </div>
-            <div class="p-8 border border-white/5 bg-vaultCard rounded-sm text-center">
-                <p class="text-xs uppercase font-mono tracking-wider text-gray-500 mb-2">Liquidity Status</p>
-                <p class="text-2xl font-extrabold text-amber-500 tracking-tight">100% Burned</p>
-                <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-2">LP Keys Permanently Destroyed</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE VAULT / CONTRACT ADDRESS -->
-    <section id="vault" class="max-w-3xl mx-auto py-32 px-6 text-center border-t border-white/5">
-        <h2 class="text-3xl font-extrabold text-white uppercase tracking-tight mb-4">
-            Access The <span class="text-transparent bg-clip-text bg-gradient-to-r from-goldGlow to-amber-200">Secure Vault</span>
-        </h2>
-        <p class="text-xs text-gray-400 mb-8 max-w-md mx-auto leading-relaxed">
-            Verify the unique token identity before trading on Raydium or Jupiter routers. Avoid imitation pools.
+        
+        <p class="max-w-2xl text-zinc-400 text-sm sm:text-base leading-relaxed mb-12 font-medium">
+            NPCAT is a high-coordinated community network deployed on Solana. Designed by collectors, meme strategists, and decentralized purists to establish structural cultural dominance.
         </p>
         
-        <div class="flex items-center justify-between bg-vaultCard border border-goldDark/30 rounded-sm p-4 max-w-xl mx-auto font-mono text-xs sm:text-sm shadow-[0_10px_30px_rgba(230,185,64,0.03)]">
-            <span id="caText" class="text-goldGlow truncate mr-4 tracking-wider">AuRUSH1111111111111111111111111111111111112</span>
-            <button onclick="copyCA()" id="copyBtn" class="bg-goldGlow text-black border border-goldGlow px-4 py-2 font-extrabold uppercase text-[10px] tracking-widest rounded-sm hover:bg-transparent hover:text-goldGlow transition-all duration-300">
-                Copy
-            </button>
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#join" class="px-8 py-4 bg-white text-black font-bold uppercase tracking-wider text-xs hover:bg-electricCyan transition-all duration-300 text-center">
+                Access Core Hub
+            </a>
+            <a href="#contract" class="px-8 py-4 border border-zinc-800 text-zinc-300 font-bold uppercase tracking-wider text-xs hover:border-neonPurple hover:text-white transition-all duration-300 text-center">
+                Secure Mint Address
+            </a>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-white/5 py-12 text-center text-[10px] text-gray-600 font-mono tracking-[0.2em]">
-        &copy; 2026 GOLD RUSH CARTEL. POWERED BY TRUE RAIDERS. NON-FINANCIAL ASSET.
-    </footer>
+    <!-- PILLARS (DE-INTELLIGIZED CUSTOM DESIGN) -->
+    <section id="pillars" class="max-w-7xl mx-auto py-32 px-6 border-t border-white/[0.04]">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Pillar 1 -->
+            <div class="p-8 bg-panelDark border border-white/[0.03] rounded-none glow-hover transition-all duration-300 relative group">
+                <div class="absolute top-0 right-0 p-3 text-[10px] font-mono text-zinc-700">01 // SYS</div>
+                <h3 class="text-xs font-bold tracking-widest text-white uppercase mb-3 text-neonPurple">Community First</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Fostering a pure decentralized network. We prioritize absolute internal collaboration to fuel secondary marketing expansion organically.</p>
+            </div>
+            <!-- Pillar 2 -->
+            <div class="p-8 bg-panelDark border border-white/[0.03] rounded-none glow-hover transition-all duration-300 relative">
+                <div class="absolute top-0 right-0 p-3 text-[10px] font-mono text-zinc-700">02 // SEC</div>
+                <h3 class="text-xs font-bold tracking-widest text-white uppercase mb-3 text-electricCyan">Transparency & Trust</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Full systemic immutability via a completely renounced smart contract setup and audited liquidity protocols.</p>
+            </div>
+            <!-- Pillar 3 -->
+            <div class="p-8 bg-panelDark border border-white/[0.03] rounded-none glow-hover transition-all duration-300 relative">
+                <div class="absolute top-0 right-0 p-3 text-[10px] font-mono text-zinc-700">03 // DEV</div>
+                <h3 class="text-xs font-bold tracking-widest text-white uppercase mb-3 text-neonPurple">Active Development</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Continuous production of community infrastructure, gamified touchpoints, and exclusive digital assets.</p>
+            </div>
+            <!-- Pillar 4 -->
+            <div class="p-8 bg-panelDark border border-white/[0.03] rounded-none glow-hover transition-all duration-300 relative">
+                <div class="absolute top-0 right-0 p-3 text-[10px] font-mono text-zinc-700">04 // VIB</div>
+                <h3 class="text-xs font-bold tracking-widest text-white uppercase mb-3 text-electricCyan">Culture & Vibes</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Sustaining high-velocity sentiment through tier-one asset production and interactive hub coordination.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- METRIC MATRIX (TOKENOMICS) -->
+    <section id="tokenomics" class="bg-panelDark/30 py-32 border-t border-white/[0.04]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20">
+                <span class="text-[10px] font-mono text-electricCyan tracking-superWide block uppercase">// SYSTEM CONFIGURATION</span>
+                <h2 class="text-2xl font-black text-white uppercase tracking-tight mt-2">Tokenomics Matrix</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/[0.05] border border-white/[0.05]">
+                <div class="p-8 bg-voidBlack">
+                    <span class="text-[10px] text-zinc-600 font-mono block mb-1">CAPITAL SUPPLY</span>
+                    <span class="text-xl font-bold text-white tracking-tight">1,000,000,000</span>
+                    <span class="block text-[9px] font-mono text-zinc-500 mt-1">Fixed Token Allocation</span>
+                </div>
+                <div class="p-8 bg-voidBlack">
+                    <span class="text-[10px] text-zinc-600 font-mono block mb-1">NETWORK FEE</span>
+                    <span class="text-xl font-bold text-electricCyan tracking-tight">0% Buy / 0% Sell</span>
+                    <span class="block text-[9px] font-mono text-zinc-500 mt-1">Zero Friction Transfers</span>
+                </div>
+                <div class="p-8 bg-voidBlack">
+                    <span class="text-[10px] text-zinc-600 font-mono block mb-1">LIQUIDITY CONDITION</span>
+                    <span class="text-xl font-bold text-matrixGreen tracking-tight">100% Burned</span>
+                    <span class="block text-[9px] font-mono text-zinc-500 mt-1">Keys Extinguished Permanently</span>
+                </div>
+                <div class="p-8 bg-voidBlack">
+                    <span class="text-[10px] text-zinc-600 font-mono block mb-1">OWNERSHIP ROUTE</span>
+                    <span class="text-xl font-bold text-white tracking-tight">Renounced</span>
+                    <span class="block text-[9px] font-mono text-zinc-500 mt-1">Zero Central Intervention</span>
+                </div>
+                <div class="p-8 bg-voidBlack">
+                    <span class="text-[10px] text-zinc-600 font-mono block mb-1">TEAM DISTRIBUTION</span>
+                    <span class="text-xl font-bold text-neonPurple tracking-tight">0% Allocated</span>
+                    <span class="block text-[9px] font-mono text-zinc-500 mt-1">No Dynamic Dumps Available</span>
+                </div>
+                <div class="p-8 bg-voidBlack">
+                    <span class="text-[10px] text-zinc-600 font-mono block mb-1">PRE-LAUNCH AUDIT</span>
+                    <span class="text-xl font-bold text-white tracking-tight">No Presale Friction</span>
+                    <span class="block text-[9px] font-mono text-zinc-500 mt-1">100% Fair Market Launch</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASYMMETRICAL ROADMAP RUNTIME -->
+    <section id="roadmap" class="max-w-5xl mx-auto py-32 px-6 border-t border-white/[0.04]">
+        <div class="mb-20 text-center md:text-left">
+            <span class="text-[10px] font-mono text-neonPurple tracking-superWide block uppercase">// DEPLOYMENT SEQUENCING</span>
+            <h2 class="text-2xl font-black text-white uppercase tracking-tight mt-2">Milestone Tracking</h2>
+        </div>
+        <div class="space-y-4">
+            <!-- Phase 1 -->
+            <div class="p-8 bg-panelDark border-l-2 border-neonPurple flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <span class="text-[9px] font-mono text-zinc-600 block mb-1">SEQUENCE_01</span>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Launch & Cultivation</h4>
+                </div>
+                <p class="text-xs text-zinc-400 max-w-xl md:text-right leading-relaxed">Initiate global DEX routing channels. Secure decentralized node volume. Broaden core social raider alignment indexes.</p>
+            </div>
+            <!-- Phase 2 -->
+            <div class="p-8 bg-panelDark border-l-2 border-electricCyan flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <span class="text-[9px] font-mono text-zinc-600 block mb-1">SEQUENCE_02</span>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Strategic Expansion</h4>
+                </div>
+                <p class="text-xs text-zinc-400 max-w-xl md:text-right leading-relaxed">Execute structural alignments with ecosystem partners. Scale media visibility channels via tier-one network operators.</p>
+            </div>
+            <!-- Phase 3 -->
+            <div class="p-8 bg-panelDark border-l-2 border-neonPurple flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <span class="text-[9px] font-mono text-zinc-600 block mb-1">SEQUENCE_03</span>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Utility Integration</h4>
+                </div>
+                <p class="text-xs text-zinc-400 max-w-xl md:text-right leading-relaxed">Deploy custom interactive sub-protocols. Launch initial digital collectibles suite ($NPCAT native) and evaluate sandbox utility vectors.</p>
+            </div>
+            <!-- Phase 4 -->
+            <div class="p-8 bg-gradient-to-r from-panelDark to-neonPurple/5 border-l-2 border-matrixGreen flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <span class="text-[9px] font-mono text-matrixGreen block mb-1 font-bold">SEQUENCE_04 // TERMINAL PHASE</span>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Global Supremacy</h4>
+                </div>
+                <p class="text-xs text-zinc-200 max-w-xl md:text-right leading-relaxed">Scale structural visibility limits globally. Establish immutable cultural movement status. Solidify $NPCAT status at the peak of network indexes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMMUTABLE CONTRACT VERIFICATION TERMINAL -->
+    <section id="contract" class="bg-panelDark/20 border-t border-white/[0.04] py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl font-black text-white uppercase tracking-tight mb-3">
+                Secure Smart Contract Routing
+            </h2>
+            <p class="text-xs text-zinc-500 mb-10 max-w-md mx-auto leading-relaxed">
+                Direct cryptographic token hash. Verify identifiers explicitly prior to trading operations.
+            </p>
+            
+            <div class="flex items-center justify-between bg-panelDark border border-white/[0.06] p-4 max-w-2xl mx-auto font-mono text-xs shadow-inner">
+                <span id="caText" class="text-electricCyan truncate mr-6 tracking-widest font-bold">BmQEXGDJNGEK78P3wVeoHNoJo6eUzC8o7bvBcx8wpump</span>
+                <button onclick="copyCA()" id="copyBtn" class="bg-white text-black px-5 py-2.5 font-bold uppercase text-[10px] tracking-widest hover:bg-neonPurple hover:text-white transition-all duration-300">
+                    Copy
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER TERMINAL CONTAINER -->
+    <section id="join" class="max-w-7xl mx-auto py-32 px-6 text-center border-t border-white/[0.04]">
+        <h2 class="text-xl font-black text-white tracking-superWide uppercase mb-4">ACCESS_COMMUNICATION_CHANNELS</h2>
+        <p class="text-xs text-zinc-500 mb-12 max-w-md mx-auto leading-relaxed">Establish synchronization nodes with the main server groups. Maintain asset security metrics.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-24">
+            <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-panelDark border border-white/[0.05] text-xs font-bold uppercase tracking-widest hover:border-electricCyan hover:text-electricCyan transition-all">
+                Connect Twitter
+            </a>
+            <a href="https://t.me/NPCATt0ken" target="_blank" class="w-full sm:w-auto px-8 py-3.5 bg-panelDark border border-white/[0.05] text-xs font-bold uppercase tracking-widest hover:border-neonPurple hover:text-neonPurple transition-all">
+                Connect Telegram
+            </a>
+        </div>
+        
+        <div class="text-[9px] text-zinc-700 font-mono tracking-superWide uppercase">
+            &copy; 2026 NPCAT MAINNET // SYSTEM VERSION 1.0.0 // PROTOCOL COMPLETION.
+        </div>
+    </section>
+
+    <!-- HUMAN INTERACTIVE INJECTION -->
     <script>
         function copyCA() {
             const caText = document.getElementById('caText').innerText;
             const btn = document.getElementById('copyBtn');
             navigator.clipboard.writeText(caText);
             
-            btn.innerText = 'Copied';
-            btn.style.borderColor = '#ffffff';
-            btn.style.backgroundColor = 'transparent';
+            btn.innerText = 'Synchronized';
+            btn.style.backgroundColor = '#10b981';
             btn.style.color = '#ffffff';
             
             setTimeout(() => {
                 btn.innerText = 'Copy';
-                btn.style.borderColor = '#e6b940';
-                btn.style.backgroundColor = '#e6b940';
+                btn.style.backgroundColor = '#ffffff';
                 btn.style.color = '#000000';
-            }, 2000);
+            }, 1800);
         }
     </script>
 </body>
