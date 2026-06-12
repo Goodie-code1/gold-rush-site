@@ -39,56 +39,47 @@
 </head>
 <body class="bg-voidBlack text-zinc-200 antialiased selection:bg-cyberPurple selection:text-white overflow-hidden">
 
-    <!-- FRONT PAGE GATEWAY (ULTRA-PREMIUM ENTRY PORTAL) -->
+    <!-- FRONT PAGE GATEWAY -->
     <div id="portalGateway" class="fixed inset-0 bg-voidBlack z-[100] flex flex-col items-center justify-center transition-all duration-1000 ease-in-out border-b border-cyberPurple/20">
-        
-        <!-- Live Full Screen Cyber Matrix Stream Background -->
         <canvas id="gatewayCanvas" class="absolute inset-0 w-full h-full opacity-25 pointer-events-none"></canvas>
-        
-        <!-- Deep Ambient Cyber Glows -->
         <div class="absolute w-[500px] h-[500px] bg-cyberPurple/10 rounded-full blur-[150px] pointer-events-none top-1/4 left-1/3"></div>
-        <div class="absolute w-[300px] h-[300px] bg-neonCyan/5 rounded-full blur-[120px] pointer-events-none bottom-1/4 right-1/3"></div>
+        <div class="absolute w-[300px] h-[300px] bg-neonGreen/5 rounded-full blur-[120px] pointer-events-none bottom-1/4 right-1/3"></div>
 
-        <!-- Portal Core Box -->
         <div class="relative z-10 text-center space-y-8 px-6 max-w-xl flex flex-col items-center">
-            
-            <!-- System Status Tag -->
             <div class="font-mono-tech text-[10px] tracking-[0.4em] text-neonCyan border border-neonCyan/30 bg-neonCyan/5 px-4 py-1.5 uppercase rounded-full">
-                // SECURE_MAINNET_ACCESS //
+                // INITIALIZING SYNDICATE NET //
             </div>
 
-            <!-- Floating Central Project Graphic Placeholder -->
+            <!-- CENTRAL CYBERPUNK CAT -->
             <div class="w-48 h-48 sm:w-56 sm:h-56 relative group animate-float-slow my-4">
-                <!-- Outer Cyber Ring -->
                 <div class="absolute inset-0 rounded-full border border-dashed border-cyberPurple/40 animate-[spin_40s_linear_infinite]"></div>
-                <div class="absolute inset-2 rounded-full border border-neonCyan/20 animate-[spin_20s_linear_infinite_reverse]"></div>
-                
-                <!-- Main Asset Holder -->
-                <div class="absolute inset-4 rounded-full bg-terminalDark border border-white/[0.08] overflow-hidden flex items-center justify-center shadow-[0_0_50px_rgba(168,85,247,0.2)]">
-                    <!-- Replace logo.png with the actual path to your token image/cat graphic asset -->
-                    <img src="logo.png" alt="$NPCAT Core" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 fallback-graphic" onerror="this.style.display='none'; document.getElementById('fallbackIcon').style.display='flex';">
-                    <!-- High-end Fallback dynamic vector if image is slow to load -->
-                    <div id="fallbackIcon" class="hidden inset-0 absolute items-center justify-center font-mono-tech font-black text-6xl text-white tracking-tighter">🐱</div>
+                <div class="absolute inset-4 rounded-full bg-terminalDark border border-cyberPurple/30 overflow-hidden flex items-center justify-center shadow-[0_0_50px_rgba(168,85,247,0.3)]">
+                    <div class="relative w-full h-full flex items-center justify-center bg-zinc-950">
+                        <div class="w-24 h-20 bg-zinc-900 rounded-b-full relative flex items-center justify-center">
+                            <div class="absolute -top-6 left-0 w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-b-[30px] border-b-zinc-900 transform -rotate-12"></div>
+                            <div class="absolute -top-6 right-0 w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-b-[30px] border-b-zinc-900 transform rotate-12"></div>
+                            <div class="absolute top-6 left-4 w-6 h-3 bg-neonCyan rounded-full shadow-[0_0_10px_#06b6d4] flex items-center justify-center gap-0.5"><span class="w-1 h-1 bg-white rounded-full"></span><span class="w-1 h-1 bg-white rounded-full"></span></div>
+                            <div class="absolute top-6 right-4 w-6 h-3 bg-neonCyan rounded-full shadow-[0_0_10px_#06b6d4] flex items-center justify-center gap-0.5"><span class="w-1 h-1 bg-white rounded-full"></span><span class="w-1 h-1 bg-white rounded-full"></span></div>
+                            <div class="absolute bottom-4 w-2 h-1 bg-rose-400 rounded-full"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <!-- Branding Text Stack -->
             <div class="space-y-3">
-                <h1 class="text-5xl sm:text-7xl font-black text-white tracking-tighter uppercase font-mono-tech leading-none">
-                    NPCAT.<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyberPurple via-purple-400 to-neonCyan">SYS</span>
+                <h1 class="text-6xl sm:text-7xl font-black text-white tracking-tighter uppercase font-mono-tech leading-none">
+                    $NPCAT
                 </h1>
-                <p class="text-xs text-zinc-400 tracking-[0.2em] font-mono-tech uppercase max-w-sm mx-auto leading-relaxed">
-                    Decentralized Community Protocol // Verified Smart Contract Deployment
+                <p class="text-xs text-zinc-400 tracking-[0.15em] font-mono-tech uppercase max-w-md mx-auto leading-relaxed">
+                    MORE THAN A MEME. WE'RE BUILDING A COMMUNITY.
                 </p>
             </div>
             
-            <!-- High-Interaction Entry Button & Loader Sequence -->
             <div class="pt-4 min-h-[80px] w-full flex flex-col items-center justify-center">
-                <!-- Active Terminal Logs during Boot (Hidden by default) -->
                 <div id="bootLogs" class="hidden font-mono-tech text-[11px] text-zinc-500 space-y-1 mb-4 text-left w-64 bg-voidBlack/90 p-3 border border-white/[0.05]">
-                    <p id="logLine1" class="text-zinc-500">&gt; Initializing protocol handshake...</p>
-                    <p id="logLine2" class="hidden text-neonCyan">&gt; Fetching ecosystem files... 100%</p>
-                    <p id="logLine3" class="hidden text-neonGreen">&gt; Access granted. Decrypting interface...</p>
+                    <p id="logLine1" class="text-zinc-500">&gt; Syncing community nodes...</p>
+                    <p id="logLine2" class="hidden text-neonCyan">&gt; Loading $NPCAT Ecosystem... 100%</p>
+                    <p id="logLine3" class="hidden text-neonGreen">&gt; Access Granted. Welcome, Degenerate.</p>
                 </div>
 
                 <button id="gateBtn" onclick="triggerEcosystemBoot()" class="group relative px-10 py-4 bg-transparent border border-cyberPurple text-white text-xs font-bold font-mono-tech tracking-[0.25em] uppercase overflow-hidden transition-all duration-300 hover:border-neonCyan shadow-[0_0_30px_rgba(168,85,247,0.2)]">
@@ -97,61 +88,61 @@
                 </button>
             </div>
         </div>
-
-        <!-- Decorative Subtle Bottom Specs -->
-        <div class="absolute bottom-6 font-mono-tech text-[9px] text-zinc-600 tracking-widest uppercase">
-            NODE_CONN: ACTIVE // LATENCY: 24MS // ENVIRONMENT: LIVE_MAINNET
-        </div>
     </div>
 
 
     <!-- REAL ECOSYSTEM INTERFACE MASTER DASHBOARD -->
     <div id="mainDashboard" class="opacity-0 transition-opacity duration-1000">
         
-        <!-- NAVIGATION OVERLAY -->
-        <nav class="fixed top-0 left-0 w-full z-50 bg-voidBlack/80 backdrop-blur-md border-b border-white/[0.03]">
-            <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
-                <a href="#" class="font-mono-tech text-xs font-bold tracking-[0.4em] text-white uppercase">
-                    //NPCAT.<span class="text-cyberPurple">SYS</span>
+        <!-- IMPROVED TOP JUMP NAVIGATION BAR -->
+        <nav class="fixed top-0 left-0 w-full z-50 bg-voidBlack/90 backdrop-blur-md border-b border-white/[0.05]">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="#" class="font-mono-tech text-base font-black tracking-widest text-white uppercase">
+                    $NPCAT
                 </a>
-                <div class="flex items-center gap-8">
-                    <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="text-lg font-black text-white hover:text-cyberPurple transition-colors leading-none">𝕏</a>
-                    <a href="https://t.me/NPCATt0ken" target="_blank" class="text-xs font-bold text-zinc-300 hover:text-white transition-colors">TELEGRAM</a>
-                    <a href="#contract" class="px-4 py-2 bg-zinc-900 border border-zinc-800 text-white font-mono-tech text-[10px] font-bold tracking-widest uppercase hover:border-cyberPurple transition-all">
-                        VIEW_CONTRACT
+                <!-- Navigation links that jump straight to sections -->
+                <div class="hidden md:flex items-center gap-6 font-mono-tech text-[11px] tracking-wider font-bold">
+                    <a href="#pillars" class="text-zinc-400 hover:text-white transition-colors uppercase">// PILLARS</a>
+                    <a href="#tokenomics" class="text-zinc-400 hover:text-neonCyan transition-colors uppercase">// TOKENOMICS</a>
+                    <a href="#roadmap" class="text-zinc-400 hover:text-cyberPurple transition-colors uppercase">// ROADMAP</a>
+                    <a href="#whats-next" class="text-zinc-400 hover:text-neonGreen transition-colors uppercase">// WHAT'S NEXT?</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="text-base font-black text-white hover:text-cyberPurple transition-colors">𝕏</a>
+                    <a href="https://t.me/NPCATt0ken" target="_blank" class="text-xs font-bold text-zinc-300 hover:text-white transition-colors">TG</a>
+                    <a href="#contract" class="px-3 py-1.5 bg-zinc-900 border border-zinc-800 text-white font-mono-tech text-[9px] font-bold tracking-widest uppercase hover:border-cyberPurple transition-all">
+                        CONTRACT
                     </a>
                 </div>
             </div>
         </nav>
 
-        <!-- ASYMMETRIC SPLIT-HERO INTERFACE -->
+        <!-- SPLIT-HERO SECTION -->
         <section class="min-h-screen max-w-7xl mx-auto px-8 pt-32 grid lg:grid-cols-12 gap-12 items-center relative">
             <div class="absolute w-[500px] h-[500px] bg-cyberPurple/5 rounded-full blur-[140px] -z-10 top-1/4 left-1/4"></div>
             
-            <!-- Left Column: Heavy Narrative Brand -->
             <div class="lg:col-span-7 space-y-8">
-                <div class="inline-flex items-center gap-3 font-mono-tech text-[10px] text-neonCyan tracking-widest uppercase border border-neonCyan/20 bg-neonCyan/5 px-3 py-1.5">
-                    <span class="w-1 h-1 bg-neonCyan animate-ping rounded-full"></span>
-                    LAUNCH STATUS: LIVE
+                <div class="inline-flex items-center gap-3 font-mono-tech text-[10px] text-neonGreen tracking-widest uppercase border border-neonGreen/20 bg-neonGreen/5 px-3 py-1.5">
+                    <span class="w-1 h-1 bg-neonGreen animate-ping rounded-full"></span>
+                    FAIR. SAFE. COMMUNITY OWNED.
                 </div>
                 <h1 class="text-5xl sm:text-7xl font-black text-white leading-[0.9] uppercase tracking-tighter">
                     MORE THAN A MEME.<br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-cyberPurple">WE'RE BUILDING A COMMUNITY.</span>
                 </h1>
-                <p class="text-zinc-300 text-sm max-w-xl leading-relaxed">
-                    NPCAT is a community-driven memecoin built by cat lovers, meme enjoyers, and internet degenerates who believe in creating something fun, useful, and lasting—together.
+                <p class="text-zinc-400 text-sm max-w-xl leading-relaxed">
+                    $NPCAT is a community-driven memecoin built by cat lovers, meme enjoyers, and internet degenerates who believe in creating something fun, useful, and lasting—together.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#terminal" class="px-6 py-3.5 bg-white text-black text-xs font-bold font-mono-tech tracking-wider uppercase text-center hover:bg-neonCyan transition-all">
-                        EXPLORE ECOSYSTEM
+                    <a href="#tokenomics" class="px-6 py-3.5 bg-white text-black text-xs font-bold font-mono-tech tracking-wider uppercase text-center hover:bg-neonCyan transition-all">
+                        VIEW TOKENOMICS
                     </a>
-                    <a href="#contract" class="px-6 py-3.5 border border-zinc-700 text-white text-xs font-bold font-mono-tech tracking-wider uppercase text-center hover:border-cyberPurple transition-all">
-                        COPY CONTRACT ADDRESS
+                    <a href="#whats-next" class="px-6 py-3.5 border border-zinc-700 text-white text-xs font-bold font-mono-tech tracking-wider uppercase text-center hover:border-cyberPurple transition-all">
+                        SEE WHAT'S NEXT
                     </a>
                 </div>
             </div>
 
-            <!-- Right Column: Live Data Feed Stream -->
             <div class="lg:col-span-5 hidden lg:block bg-terminalDark border border-white/[0.05] p-6 font-mono-tech text-[11px] leading-relaxed space-y-4 shadow-2xl relative h-[320px]">
                 <div class="flex items-center justify-between border-b border-white/[0.05] pb-3 text-zinc-400">
                     <span>TOKEN_LOG_STREAM</span>
@@ -165,97 +156,133 @@
                     <p class="text-zinc-300">&gt; Launch Strategy: <span class="text-white font-bold">100% Fair Launch</span></p>
                     <p class="text-zinc-500">&gt; Connection secure. Welcome to the community.</p>
                 </div>
-                <div class="absolute bottom-6 left-6 right-6 bg-voidBlack p-3 border border-white/[0.03] text-zinc-400 text-[10px]">
-                    NOTICE: This project operates purely through decentralized community ownership.
-                </div>
             </div>
         </section>
 
-        <!-- CORE PILLARS & TOKENOMICS -->
-        <section id="terminal" class="max-w-7xl mx-auto px-8 py-32 border-t border-white/[0.04]">
+        <!-- CORE PILLARS SECTION -->
+        <section id="pillars" class="max-w-7xl mx-auto px-8 py-32 border-t border-white/[0.04]">
             <div class="grid lg:grid-cols-3 gap-8">
                 <div class="lg:col-span-1 space-y-4">
-                    <div class="sticky top-28">
-                        <span class="font-mono-tech text-[10px] text-cyberPurple tracking-widest block uppercase">// DECENTRALIZED LAYER</span>
-                        <h2 class="text-2xl font-black text-white uppercase tracking-tight mt-1 mb-4">Core Pillars</h2>
-                        <p class="text-xs text-zinc-400 leading-relaxed">The foundational standards built directly into the culture of the $NPCAT network.</p>
+                    <div>
+                        <span class="font-mono-tech text-[10px] text-cyberPurple tracking-widest block uppercase">// CORE LAYER</span>
+                        <h2 class="text-3xl font-black text-white uppercase tracking-tight mt-1 mb-4">Core Pillars</h2>
                     </div>
                 </div>
 
                 <div class="lg:col-span-2 grid sm:grid-cols-2 gap-4">
                     <div class="p-6 bg-terminalDark border border-white/[0.03] space-y-2">
-                        <span class="font-mono-tech text-[10px] text-zinc-500">01 / TEAMWORK</span>
-                        <h4 class="text-sm font-bold tracking-wider text-white uppercase">Community First</h4>
-                        <p class="text-xs text-zinc-300 leading-relaxed">Build a strong, organic community that loves memes, supports cats, and helps each other grow.</p>
+                        <span class="font-mono-tech text-[11px] text-cyberPurple font-black block">01 / COMMUNITY FIRST</span>
+                        <p class="text-xs text-zinc-300 leading-relaxed">We're not here to pump and dump. We're here to build a strong, organic community that loves memes, cares about cats, and supports each other.</p>
                     </div>
                     <div class="p-6 bg-terminalDark border border-white/[0.03] space-y-2">
-                        <span class="font-mono-tech text-[10px] text-zinc-500">02 / INTEGRITY</span>
-                        <h4 class="text-sm font-bold tracking-wider text-white uppercase">Transparency & Trust</h4>
-                        <p class="text-xs text-zinc-300 leading-relaxed">Maintain accountability through a renounced contract, locked liquidity, and transparent project operations.</p>
+                        <span class="font-mono-tech text-[11px] text-rose-400 font-black block">02 / TRANSPARENCY & TRUST</span>
+                        <p class="text-xs text-zinc-300 leading-relaxed">The team is doxxed, liquidity is locked, and the contract is renounced. No shady moves, just honesty and accountability.</p>
                     </div>
                     <div class="p-6 bg-terminalDark border border-white/[0.03] space-y-2">
-                        <span class="font-mono-tech text-[10px] text-zinc-500">03 / PROGRESS</span>
-                        <h4 class="text-sm font-bold tracking-wider text-white uppercase">Active Development</h4>
-                        <p class="text-xs text-zinc-300 leading-relaxed">Continuously improve the project through new features, community events, and utility development.</p>
+                        <span class="font-mono-tech text-[11px] text-neonCyan font-black block">03 / ACTIVE DEVELOPMENT</span>
+                        <p class="text-xs text-zinc-300 leading-relaxed">We're constantly building, improving, and delivering. From community events to utilities—we're laying the foundation for long-term success.</p>
                     </div>
                     <div class="p-6 bg-terminalDark border border-white/[0.03] space-y-2">
-                        <span class="font-mono-tech text-[10px] text-zinc-500">04 / ENERGY</span>
-                        <h4 class="text-sm font-bold tracking-wider text-white uppercase">Culture & Vibes</h4>
-                        <p class="text-xs text-zinc-300 leading-relaxed">Foster positivity, creativity, fun content, and a welcoming environment where every community member matters.</p>
+                        <span class="font-mono-tech text-[11px] text-neonGreen font-black block">04 / CULTURE & VIBES</span>
+                        <p class="text-xs text-zinc-300 leading-relaxed">$NPCAT is about good vibes, fun content, and spreading positivity. Your voice matters, art, and experiences that bring people together.</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Tokenomics Breakdown -->
-            <div class="mt-16 bg-terminalDark border border-white/[0.04] divide-y divide-white/[0.04]">
-                <div class="p-6 grid sm:grid-cols-3 gap-4 items-center">
-                    <span class="font-mono-tech text-[10px] text-zinc-400 uppercase tracking-wider">Total Supply</span>
-                    <span class="text-base font-bold text-white sm:col-span-2">1,000,000,000 $NPCAT</span>
-                </div>
-                <div class="p-6 grid sm:grid-cols-3 gap-4 items-center">
-                    <span class="font-mono-tech text-[10px] text-zinc-400 uppercase tracking-wider">Transaction Tax</span>
-                    <span class="text-base font-bold text-neonCyan sm:col-span-2">0% Buy / 0% Sell</span>
-                </div>
-                <div class="p-6 grid sm:grid-cols-3 gap-4 items-center">
-                    <span class="font-mono-tech text-[10px] text-zinc-400 uppercase tracking-wider">Launch Distribution</span>
-                    <span class="text-base font-bold text-white sm:col-span-2">No Private Presale (100% Fair Launch)</span>
                 </div>
             </div>
         </section>
 
-        <!-- ROADMAP -->
+        <!-- TOKENOMICS SECTION (HIGHLY EMPHASIZED KEY PHRASES) -->
+        <section id="tokenomics" class="max-w-7xl mx-auto px-8 py-24 border-t border-white/[0.04]">
+            <div class="mb-12">
+                <span class="font-mono-tech text-[10px] text-neonCyan tracking-widest block uppercase">// MATRIX MATH</span>
+                <h2 class="text-3xl font-black text-white uppercase tracking-tight mt-1">Tokenomics</h2>
+            </div>
+            <div class="bg-terminalDark border border-white/[0.04] divide-y divide-white/[0.04]">
+                <div class="p-8 grid sm:grid-cols-3 gap-4 items-center">
+                    <span class="font-mono-tech text-xs text-zinc-400 uppercase tracking-wider">Total Supply</span>
+                    <!-- Key metrics bolded and enlarged -->
+                    <span class="text-2xl sm:text-3xl font-black text-white sm:col-span-2 tracking-tight">1,000,000,000 $NPCAT</span>
+                </div>
+                <div class="p-8 grid sm:grid-cols-3 gap-4 items-center">
+                    <span class="font-mono-tech text-xs text-zinc-400 uppercase tracking-wider">Tax Parameters</span>
+                    <span class="text-2xl sm:text-3xl font-black text-neonCyan sm:col-span-2 tracking-tight">0% Buy / 0% Sell</span>
+                </div>
+                <div class="p-8 grid sm:grid-cols-3 gap-4 items-center">
+                    <span class="font-mono-tech text-xs text-zinc-400 uppercase tracking-wider">Launch Protocols</span>
+                    <span class="text-xl sm:text-2xl font-black text-zinc-100 sm:col-span-2 tracking-tight">No Private Presale <span class="text-cyberPurple block sm:inline text-sm sm:text-xl font-normal opacity-80">(100% Fair Launch)</span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT ROADMAP -->
         <section id="roadmap" class="max-w-7xl mx-auto px-8 py-32 border-t border-white/[0.04] overflow-hidden">
             <div class="mb-16">
-                <span class="font-mono-tech text-[10px] text-neonCyan tracking-widest block uppercase">// GROWTH MAP</span>
-                <h2 class="text-2xl font-black text-white uppercase tracking-tight mt-1">Project Roadmap</h2>
+                <span class="font-mono-tech text-[10px] text-cyberPurple tracking-widest block uppercase">// PIPELINE</span>
+                <h2 class="text-3xl font-black text-white uppercase tracking-tight mt-1">Roadmap</h2>
             </div>
 
             <div class="grid md:grid-cols-4 gap-6 relative">
-                <div class="p-6 bg-terminalDark/50 border border-white/[0.03] space-y-3 relative">
-                    <span class="font-mono-tech text-[10px] text-cyberPurple font-bold">PHASE 01</span>
-                    <h3 class="text-sm font-bold uppercase text-white">Launch & Building</h3>
-                    <p class="text-xs text-zinc-300 leading-relaxed">Launch on DEX. Grow the community. Spread awareness. Build a strong foundation.</p>
+                <div class="p-6 bg-terminalDark/50 border border-white/[0.03] space-y-3">
+                    <span class="font-mono-tech text-[11px] text-cyberPurple font-black block">PHASE 1</span>
+                    <h3 class="text-sm font-bold uppercase text-white">Launch & Community Building</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Launch on DEX, grow our community, spread the word, and build the foundation.</p>
                 </div>
                 <div class="p-6 bg-terminalDark/50 border border-white/[0.03] space-y-3">
-                    <span class="font-mono-tech text-[10px] text-neonCyan font-bold">PHASE 02</span>
-                    <h3 class="text-sm font-bold uppercase text-white">Partnerships</h3>
-                    <p class="text-xs text-zinc-300 leading-relaxed">Collaborate with other projects. Partner with influencers and brands. Expand reach and visibility.</p>
+                    <span class="font-mono-tech text-[11px] text-neonCyan font-black block">PHASE 2</span>
+                    <h3 class="text-sm font-bold uppercase text-white">Partnerships & Marketing</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Collaborate with other projects, influencers, and brands. Expand our reach.</p>
                 </div>
                 <div class="p-6 bg-terminalDark/50 border border-white/[0.03] space-y-3">
-                    <span class="font-mono-tech text-[10px] text-cyberPurple font-bold">PHASE 03</span>
-                    <h3 class="text-sm font-bold uppercase text-white">Utilities</h3>
-                    <p class="text-xs text-zinc-300 leading-relaxed">Introduce community-driven utilities. Launch NFTs. Explore gaming integrations. Deliver engaging experiences.</p>
+                    <span class="font-mono-tech text-[11px] text-cyberPurple font-black block">PHASE 3</span>
+                    <h3 class="text-sm font-bold uppercase text-white">Utilities & Experiences</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed">Introduce community-driven utilities, NFTs, games, and more.</p>
                 </div>
-                <div class="p-6 bg-gradient-to-b from-terminalDark to-purple-950/10 border border-cyberPurple/20 space-y-3">
-                    <span class="font-mono-tech text-[10px] text-neonCyan font-bold">PHASE 04 🐱</span>
+                <div class="p-6 bg-gradient-to-b from-terminalDark to-emerald-950/20 border border-neonGreen/30 space-y-3">
+                    <span class="font-mono-tech text-[11px] text-neonGreen font-black block">PHASE 4 🐱</span>
                     <h3 class="text-sm font-bold uppercase text-white">World Domination</h3>
-                    <p class="text-xs text-zinc-200 leading-relaxed">Scale the project globally. Expand the ecosystem. Strengthen the culture. Establish $NPCAT as a leading meme movement.</p>
+                    <p class="text-xs text-zinc-300 leading-relaxed">Take over the meme world. One cat at a time. With love, laughs, and $NPCAT.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECURITY ROUTING CONTRACT ADDRESS SECTION (IMAGE CLEANUP APPLIED) -->
-        <section id="contract" class="max-w-7xl mx-auto px-8 py-24 border-t border-white/[0.04]">
+        <!-- ADDED & EMPHASIZED "WHAT'S NEXT?" SEGMENT -->
+        <section id="whats-next" class="max-w-7xl mx-auto px-8 py-32 border-t border-white/[0.04]">
+            <div class="bg-gradient-to-r from-terminalDark via-zinc-950 to-terminalDark border border-neonGreen/30 p-10 rounded-xl max-w-4xl mx-auto grid md:grid-cols-12 gap-8 items-center shadow-[0_0_50px_rgba(16,185,129,0.05)]">
+                
+                <!-- Left Text Stack with Big, Heavy Core Highlights -->
+                <div class="md:col-span-8 space-y-6 text-left">
+                    <div class="inline-block font-mono-tech text-[10px] text-neonGreen tracking-widest uppercase border border-neonGreen/30 bg-neonGreen/5 px-3 py-1">
+                        // FUTURE OUTLOOK
+                    </div>
+                    <h3 class="text-4xl sm:text-5xl font-black text-white uppercase tracking-tighter">What's Next?</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Key lines made significantly bigger than base text -->
+                        <p class="text-lg sm:text-xl font-bold text-zinc-100 leading-snug">
+                            This is just the beginning. We have big plans, and we're inviting you to be part of it.
+                        </p>
+                        <p class="text-xl sm:text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neonCyan to-emerald-400 tracking-tight uppercase leading-none py-1">
+                            Your voice matters. Your ideas matter. You matter.
+                        </p>
+                        <p class="text-xs sm:text-sm text-zinc-400 font-medium leading-relaxed">
+                            Together, we can turn a meme into a movement.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Visual Floating Floating Island Wrapper -->
+                <div class="md:col-span-4 flex justify-center">
+                    <div class="bg-zinc-900 border border-white/[0.05] p-8 rounded-xl text-center font-mono-tech space-y-4 shadow-2xl w-full max-w-[220px] transform hover:scale-105 transition-transform duration-300">
+                        <span class="text-5xl block animate-bounce">🏝️</span>
+                        <div class="text-xs font-black text-white uppercase tracking-widest">$NPCAT REALM</div>
+                        <div class="text-[10px] text-neonGreen bg-neonGreen/10 py-1.5 px-3 rounded-full font-bold inline-block border border-neonGreen/20">GROWING LIVE</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VERIFIED CONTRACT CONTAINER -->
+        <section id="contract" class="max-w-7xl mx-auto px-8 py-16 border-t border-white/[0.04]">
             <div class="bg-terminalDark border border-white/[0.05] p-8 max-w-3xl mx-auto text-center space-y-6">
                 <div class="space-y-1">
                     <h3 class="text-lg font-bold text-white uppercase tracking-tight">Verified Contract Address</h3>
@@ -270,25 +297,29 @@
             </div>
         </section>
 
-        <!-- FOOTER SYNDICATE LINKS -->
+        <!-- FOOTER -->
         <footer class="max-w-7xl mx-auto px-8 py-24 border-t border-white/[0.04] text-center space-y-8">
             <div class="space-y-2">
                 <h4 class="text-xs font-bold tracking-[0.3em] text-white uppercase font-mono-tech">JOIN THE $NPCAT COMMUNITY</h4>
-                <p class="text-xs text-zinc-400 max-w-md mx-auto leading-relaxed">Follow us, engage with us, meme with us, and help shape the future of $NPCAT.</p>
+                <p class="text-xs text-zinc-400 max-w-md mx-auto leading-relaxed">Follow us, engage with us, meme with us, and help shape the future of $NPCAT. Together, we can turn a meme into a legacy.</p>
             </div>
             <div class="flex justify-center items-center gap-4 text-xs font-mono-tech">
                 <a href="https://x.com/npcatt0ken?s=21" target="_blank" class="px-6 py-3 border border-zinc-800 text-zinc-300 hover:border-neonCyan hover:text-white transition-colors font-bold text-sm">𝕏 (TWITTER)</a>
                 <a href="https://t.me/NPCATt0ken" target="_blank" class="px-6 py-3 border border-zinc-800 text-zinc-300 hover:border-cyberPurple hover:text-white transition-colors font-bold">TELEGRAM</a>
             </div>
+            
+            <div class="text-xs text-rose-400 font-bold tracking-wide uppercase pt-4">
+                SNPCAT - ONE CAT, ONE COMMUNITY, ONE FUTURE. ❤️
+            </div>
+            
             <div class="text-[9px] text-zinc-600 font-mono-tech tracking-widest uppercase">
                 &copy; 2026 NPCAT // ALL RIGHTS RESERVED // COMMUNITY OWNED PROTOCOL.
             </div>
         </footer>
     </div>
 
-    <!-- MAIN CONTROL SCRIPTS -->
+    <!-- CODE TRIGGERS -->
     <script>
-        // Clipboard Copy Action
         function executeCopy() {
             const hash = document.getElementById('caHash').innerText;
             const btn = document.getElementById('copyTerminalBtn');
@@ -303,12 +334,10 @@
             }, 2000);
         }
 
-        // Custom Simulated Boot Transition Sequence
         function triggerEcosystemBoot() {
             const btn = document.getElementById('gateBtn');
             const logs = document.getElementById('bootLogs');
             
-            // Hide entry button, reveal terminal stream instantly
             btn.classList.add('hidden');
             logs.classList.remove('hidden');
 
@@ -320,7 +349,6 @@
                 document.getElementById('logLine3').classList.remove('hidden');
             }, 900);
 
-            // Trigger full interface slide-and-reveal sequence
             setTimeout(() => {
                 const portal = document.getElementById('portalGateway');
                 const mainContent = document.getElementById('mainDashboard');
@@ -337,7 +365,7 @@
             }, 1500);
         }
 
-        // --- Custom Matrix Digital Rain Background Logic ---
+        // --- Gateway Canvas Particle Logic ---
         const canvas = document.getElementById('gatewayCanvas');
         const ctx = canvas.getContext('2d');
 
@@ -345,6 +373,7 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         }
+        window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
         const binary = '01';
@@ -354,14 +383,14 @@
 
         const rainDrops = [];
         for (let x = 0; x < columns; x++) {
-            rainDrops[x] = Math.random() * -100; // Natural staggered layout
+            rainDrops[x] = Math.random() * -100;
         }
 
         function drawMatrix() {
-            ctx.fillStyle = 'rgba(3, 2, 6, 0.08)'; // Perfect background overlay matching voidBlack
+            ctx.fillStyle = 'rgba(3, 2, 6, 0.08)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = '#a855f7'; // Cyber Purple Matrix Stream Tint
+            ctx.fillStyle = '#a855f7';
             ctx.font = fontSize + 'px monospace';
 
             for (let i = 0; i < rainDrops.length; i++) {
@@ -376,7 +405,6 @@
         }
 
         setInterval(drawMatrix, 33);
-        window.addEventListener('resize', resizeCanvas);
     </script>
 </body>
 </html>
